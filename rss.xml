@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[The Data Organization's RSS Feed]]></title><description><![CDATA[Modern Lifestyles and Tech Decoded]]></description><link>https://huydhoang.com</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 08 May 2021 09:14:20 GMT</lastBuildDate><item><title><![CDATA[Từ toán thống kê tới Deep Learning]]></title><description><![CDATA[Trong lịch sử loài người, việc biến thực tế phức tạp trở thành mô hình đơn giản hơn và ước lượng outcome chưa xảy ra dựa vào mô hình đã trở…]]></description><link>https://huydhoang.com/tu-toan-thong-ke-toi-deep-learning/</link><guid isPermaLink="false">https://huydhoang.com/tu-toan-thong-ke-toi-deep-learning/</guid><pubDate>Mon, 06 Jan 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Trong lịch sử loài người, việc biến thực tế phức tạp trở thành mô hình đơn giản hơn và ước lượng outcome chưa xảy ra dựa vào mô hình đã trở thành một phần của quá trình tiến hóa.&lt;/p&gt;
+&lt;p&gt;Bằng bộ não, hệ thần kinh và 5 giác quan, chúng ta làm điều này liên tục, cho dù có nhận ra là mình đang làm hay không.&lt;/p&gt;
+&lt;h1&gt;Statistics&lt;/h1&gt;
+&lt;p&gt;Giả sử tôi là một nhà bán giày ở thế kỷ 19, tôi sắp sửa bán ra thị trường một loại giày mới.&lt;/p&gt;
+&lt;p&gt;Để biết mình nên nhập về số lượng bao nhiêu cho một cỡ giày nhất định, tôi đưa hình ảnh cho khách tới tham quan cửa hàng và hỏi họ có sẵn sàng mua hay không?&lt;/p&gt;
+&lt;p&gt;Từ dữ liệu đó, tôi vẽ được biểu đồ như dưới đây - trục dọc tương ứng với lượng khách trả lời “Có” và trục ngang là cỡ giày. Vậy những size giày khách có khả năng mua nhiều nhất lần lượt là các cỡ 38, 39, 37.&lt;/p&gt;
+&lt;p&gt;Biểu đồ này có dạng hình quả chuông nên thường được gọi là Bell Curve, còn kỹ thuật hơn là Frequency Distribution (phân phối tần suất) — và quá trình hỏi khách hàng được gọi là lấy mẫu hay Sampling.&lt;/p&gt;
+&lt;p&gt;Đây chính là toán thống kê — hay Statistics.&lt;/p&gt;
+&lt;p&gt;Mỗi distribution được đại diện bởi 2 con số quan trọng nhất là giá trị trung bình (hay Mean value) và độ lệch chuẩn — hay dung sai chuẩn (hay Standard Deviation).&lt;/p&gt;
+&lt;p&gt;Một cách đơn giản hóa hơi quá, chúng tương đương với vị trí đỉnh và độ rộng của quả chuông.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;margin: 7vw 0;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1360px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAABYlAAAWJQFJUiTwAAABFUlEQVQ4y5WUCQrEMAhFc/+7lu77kuEJv9hM0mECRRPN61dLQyys67puKz+N5XJDfFk+8TzP2LZtHIYhTtMUx3GM67rauc8NJZBXdhyHQZZlMQjQpmliXdcGfgV6kCygruvMR9G2bQae59l8fzf8gmEBonDf92JrFAulnrFIQgVAlasSpRKr+AOYwiit73sDCoqldCCKo7yqqrv0UCqThtN4BoAqLDAmDQD1QIlxjmUfct8WSigHVbyZKfvS8AVIV/AwLqo0FAjKuXwBeSiX88eH7TckqGdc8L4mLQh72iD//g79EAjqEQQftVKF7/fK/wJKIWD10F/SGb1LW5JVqBI0OZUmmNoh1XoRYGJZhelf5N/FUD7zxp5JMZ2CSQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/77ee072d43235831fe36c45925d82df9/51a8e/b4da2e7f66d117c696cc56bbe2bbd1debe6fec0c.webp 340w,
+/static/77ee072d43235831fe36c45925d82df9/713b7/b4da2e7f66d117c696cc56bbe2bbd1debe6fec0c.webp 680w,
+/static/77ee072d43235831fe36c45925d82df9/54376/b4da2e7f66d117c696cc56bbe2bbd1debe6fec0c.webp 1360w,
+/static/77ee072d43235831fe36c45925d82df9/0be89/b4da2e7f66d117c696cc56bbe2bbd1debe6fec0c.webp 2040w,
+/static/77ee072d43235831fe36c45925d82df9/5eb26/b4da2e7f66d117c696cc56bbe2bbd1debe6fec0c.webp 2048w&quot;
+              sizes=&quot;(max-width: 1360px) 100vw, 1360px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/77ee072d43235831fe36c45925d82df9/ad208/b4da2e7f66d117c696cc56bbe2bbd1debe6fec0c.png 340w,
+/static/77ee072d43235831fe36c45925d82df9/a5a26/b4da2e7f66d117c696cc56bbe2bbd1debe6fec0c.png 680w,
+/static/77ee072d43235831fe36c45925d82df9/60356/b4da2e7f66d117c696cc56bbe2bbd1debe6fec0c.png 1360w,
+/static/77ee072d43235831fe36c45925d82df9/bb4cf/b4da2e7f66d117c696cc56bbe2bbd1debe6fec0c.png 2040w,
+/static/77ee072d43235831fe36c45925d82df9/6a339/b4da2e7f66d117c696cc56bbe2bbd1debe6fec0c.png 2048w&quot;
+            sizes=&quot;(max-width: 1360px) 100vw, 1360px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/77ee072d43235831fe36c45925d82df9/60356/b4da2e7f66d117c696cc56bbe2bbd1debe6fec0c.png&quot;
+            alt=&quot;b4da2e7f66d117c696cc56bbe2bbd1debe6fec0c.png&quot;
+            title=&quot;b4da2e7f66d117c696cc56bbe2bbd1debe6fec0c.png&quot;
+            loading=&quot;lazy&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;b4da2e7f66d117c696cc56bbe2bbd1debe6fec0c.png&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;Ví dụ trên nói về dạng phân phối lý tưởng gọi là Normal Distribution — phân phối chuẩn.&lt;/p&gt;
+&lt;p&gt;Trên thực tế, dữ liệu rất đa dạng và có thể xuất hiện nhiều dạng phân phối abnormal — không chuẩn khác, đại diện bởi các loại biểu đồ trong hình dưới đây&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;margin: 7vw 0;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 523px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.1764705882353%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAC4jAAAuIwF4pT92AAACK0lEQVQoz21SS2sTURidf9ONipCIYqu2iEgXxZ1rFVyJKF0oLiyCC6Fgmj7SpBpqq0SNVI3pC2JDF7GTGBLbZB5JJq9JbFoznU4aJvPMzP1kMpKVd3G5fN853/nO4WIIAQBUBW05dQT/O/6fXOVYBYBErbMQbwKATQEAzOy9llJHg3NUtQeyKzZi/0S/9iqPsyIA+OLNscWCopv9LmbPuB9indPkZr4FAEaPbd9fCOGMiwhTVt0bb556mY0W2/2uRSb+KCMLhdMu8nn00Fa2B3Md42agPDCZWUxajh6v1wcms3c/1yTdaiOLbBrBRPXBh8zTb7knK5nigQAAiqq1RSmAVx6tkBMblTWCA4C3ycOJteJ4MLOarmmqomk6hhDomgKmrKiKroiarttG1K6pSBLSZNTPBwCZhqFJotiRe86x9G9pfLU+s8PN4ZwrxgV+Hdu4d2lekA07G7PH75rIREjpIralfdzlLfJ3pn12irgwS1715Rxu4s6nMgDoBrqxxESYEwDAWdGOR9bNdbr1ItqYx5t2Cth2qX15nh7156+/zl/x0ve+sgDACuqwl34YZt/v8qP+vKhaK7RkY+wNM+zNjfhyzyL7/5QdU8SQhxryUE43cTtoKW8xbaebvDhLnZ8hz02TkYK1wl5DGvTQlzyUw03cCpYRAqzZlndKwla2HsLpHwy/V28BoIYgxYr8Zqq0kWRiDF/hrE/SEDrb9EEIp8OJQrzEy6r2F4tYLWvStTuNAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/6f3e528a71c6de3cf2cce8ffa48a2a9c/51a8e/235e6d57bf35bb02211dbb5ff1184b3ec1bebf29.webp 340w,
+/static/6f3e528a71c6de3cf2cce8ffa48a2a9c/3bc86/235e6d57bf35bb02211dbb5ff1184b3ec1bebf29.webp 523w&quot;
+              sizes=&quot;(max-width: 523px) 100vw, 523px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/6f3e528a71c6de3cf2cce8ffa48a2a9c/ad208/235e6d57bf35bb02211dbb5ff1184b3ec1bebf29.png 340w,
+/static/6f3e528a71c6de3cf2cce8ffa48a2a9c/5bbfc/235e6d57bf35bb02211dbb5ff1184b3ec1bebf29.png 523w&quot;
+            sizes=&quot;(max-width: 523px) 100vw, 523px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/6f3e528a71c6de3cf2cce8ffa48a2a9c/5bbfc/235e6d57bf35bb02211dbb5ff1184b3ec1bebf29.png&quot;
+            alt=&quot;235e6d57bf35bb02211dbb5ff1184b3ec1bebf29.png&quot;
+            title=&quot;235e6d57bf35bb02211dbb5ff1184b3ec1bebf29.png&quot;
+            loading=&quot;lazy&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;235e6d57bf35bb02211dbb5ff1184b3ec1bebf29.png&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;h1&gt;Machine Learning&lt;/h1&gt;
+&lt;p&gt;Machine Learning truyền thống chủ yếu tìm cách xác định đường cong phân phối để predict outcome. Consider ví dụ sau đây về hồi quy Logarithm — Logistic Regression.&lt;/p&gt;
+&lt;p&gt;(Đây là một trong những thuật toán machine learning phổ biến nhất bởi tính dễ thực hiện và hữu dụng trong nhiều trường hợp dữ liệu không quá phức tạp.)&lt;/p&gt;
+&lt;p&gt;Đề bài: có 20 học sinh cùng ôn thi với số giờ ôn thi và kết quả thi như bảng sau (pass=1, fail=0).&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;margin: 7vw 0;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 855px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 6.764705882352941%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAABCAYAAADeko4lAAAACXBIWXMAAAsTAAALEwEAmpwYAAAANElEQVQI12O4duPO/2cvXv1/8+79/9dv34HpN2/f/3/77gOYRsXvwBim7i0Uw+Tfvf/wHwDbFEtIQqZdVgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/fe986d056a98f4144f7c0f68bd321110/51a8e/ec16114ed1f5c3789bb666d0d9887a0a798e1586.webp 340w,
+/static/fe986d056a98f4144f7c0f68bd321110/713b7/ec16114ed1f5c3789bb666d0d9887a0a798e1586.webp 680w,
+/static/fe986d056a98f4144f7c0f68bd321110/da811/ec16114ed1f5c3789bb666d0d9887a0a798e1586.webp 855w&quot;
+              sizes=&quot;(max-width: 855px) 100vw, 855px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/fe986d056a98f4144f7c0f68bd321110/ad208/ec16114ed1f5c3789bb666d0d9887a0a798e1586.png 340w,
+/static/fe986d056a98f4144f7c0f68bd321110/a5a26/ec16114ed1f5c3789bb666d0d9887a0a798e1586.png 680w,
+/static/fe986d056a98f4144f7c0f68bd321110/c4d9d/ec16114ed1f5c3789bb666d0d9887a0a798e1586.png 855w&quot;
+            sizes=&quot;(max-width: 855px) 100vw, 855px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/fe986d056a98f4144f7c0f68bd321110/c4d9d/ec16114ed1f5c3789bb666d0d9887a0a798e1586.png&quot;
+            alt=&quot;ec16114ed1f5c3789bb666d0d9887a0a798e1586.png&quot;
+            title=&quot;ec16114ed1f5c3789bb666d0d9887a0a798e1586.png&quot;
+            loading=&quot;lazy&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;ec16114ed1f5c3789bb666d0d9887a0a798e1586.png&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;Từ dữ liệu này, sử dụng Logistic Regression, ta có thể vẽ được đường cong màu xanh — tương đương với (nửa bên trái của) đường cong phân phối trong ví dụ trước.&lt;/p&gt;
+&lt;p&gt;Kết quả cho thấy để có xác suất qua môn ≥ 75% thì một học sinh nên học ít nhất khoảng 3.5 giờ.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;margin: 7vw 0;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 563px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 72.35294117647058%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAOABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAECBf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAdubQxh//8QAFxABAQEBAAAAAAAAAAAAAAAAABEBEP/aAAgBAQABBQLeYiI//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAFBABAAAAAAAAAAAAAAAAAAAAIP/aAAgBAQAGPwJf/8QAFxABAQEBAAAAAAAAAAAAAAAAAREAEP/aAAgBAQABPyFV4mZt4I3/2gAMAwEAAgADAAAAEHPP/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPxA//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAGxABAAICAwAAAAAAAAAAAAAAAQARIVExQZH/2gAIAQEAAT8QTka1ct2+zsGNYIGoNUsxHFWT/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/75a55f333da6055f392d858841587f3c/51a8e/89b86beb46d42658fdd94bbc4f25c47296603d8a.webp 340w,
+/static/75a55f333da6055f392d858841587f3c/1ce51/89b86beb46d42658fdd94bbc4f25c47296603d8a.webp 563w&quot;
+              sizes=&quot;(max-width: 563px) 100vw, 563px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/75a55f333da6055f392d858841587f3c/2e524/89b86beb46d42658fdd94bbc4f25c47296603d8a.jpg 340w,
+/static/75a55f333da6055f392d858841587f3c/3a88f/89b86beb46d42658fdd94bbc4f25c47296603d8a.jpg 563w&quot;
+            sizes=&quot;(max-width: 563px) 100vw, 563px&quot;
+            type=&quot;image/jpeg&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/75a55f333da6055f392d858841587f3c/3a88f/89b86beb46d42658fdd94bbc4f25c47296603d8a.jpg&quot;
+            alt=&quot;89b86beb46d42658fdd94bbc4f25c47296603d8a.jpeg&quot;
+            title=&quot;89b86beb46d42658fdd94bbc4f25c47296603d8a.jpeg&quot;
+            loading=&quot;lazy&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;89b86beb46d42658fdd94bbc4f25c47296603d8a.jpeg&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;h1&gt;Deep Learning&lt;/h1&gt;
+&lt;h2&gt;(một sub field của Machine Learning)&lt;/h2&gt;
+&lt;p&gt;Nếu bạn từng sở hữu smartphone với Google Assistant hay Siri, laptop với Cortana hay loa Google Home điều khiển bằng giọng nói, bạn đã tương tác với mạng neuron được huấn luyện nhờ thuật toán Deep Learning.&lt;/p&gt;
+&lt;p&gt;Deep Learning cho tỷ lệ chính xác cao tới 95-99% trong nhiều bài toán phức tạp mà con người không có cách định nghĩa quy luật bằng công thức toán học thông thường. Ví dụ như bài toán nhận dạng từ ngữ trong sample âm thanh, hay nhận dạng người, vật trong hình ảnh.&lt;/p&gt;
+&lt;p&gt;Vậy bằng cách nào chúng ta đi từ Machine Learning sang Deep Learning?&lt;/p&gt;
+&lt;p&gt;Vào cuối thập niên 1950s, đầu 1960s, một số nhà khoa học bắt đầu thử nghiệm giả lập cách bộ não hoạt động trên máy tính để nhận dạng hình ảnh. Ví dụ demo đầu tiên là 1 chiếc máy tính nhận diện được hình tròn, vuông, tam giác nhờ sử dụng 1 neuron.&lt;/p&gt;
+&lt;p&gt;Sau này, có nhiều nghiên cứu khác sử dụng nhiều neuron hơn kết nối với nhau thành mạng neuron (neural network) nhưng kết quả chưa bao giờ vượt qua được các thuật toán Machine Learning truyền thống. Thời kỳ này được coi là mùa đông của AI research.&lt;/p&gt;
+&lt;p&gt;Mãi tới năm 2012, 2 nghiên cứu sinh được dẫn dắt bởi GS. Geoffrey Hinton tại ĐH Toronto, Canada mới đạt được bước đột phá trong nhận diện hình ảnh nhờ sử dụng thuật toán Deep Learning.&lt;/p&gt;
+&lt;p&gt;Họ trở thành team duy nhất đạt sai số &amp;#x3C; 25% trên kho dữ liệu ImageNet năm đó.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;margin: 7vw 0;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 620px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 129.11764705882354%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAaCAYAAAC3g3x9AAAACXBIWXMAAAsTAAALEwEAmpwYAAACWElEQVRIx5VV2ZKCMBDM/3+dR2l531qWpUIQCIdVs9XDNgYW3d2HISEJPUf3BHM4HGQ2m8lisZDdbifL5VJtvV7LdruV1Wqle/P5XPfxjjn2N5uN7Pd7ybJM8jxXM/f7Xa7Xq8RxLI/HQ6Io0pHvGK219RyGM/45AMKcc2KCIBCAYgMeiqJQo0eav8YzXGsA4gGDR4zc/K8R2NAjwu8C5EE/kvaeb4ZptAEZOef+x5+cmDRNdYLCl2Upz+ezNr4jg7+mbhjZ7XZTGUBCsPF4rPKYTCYCaXVF0wnIlME09DadTnUEEMGx50f5MWVuINLz+SyXy0WSJFGDlDCyLH8mBSlDj77OsImRtaTufNLeApIUHkKkw+FQ24sthpY7nU6dbDcAAYQJycEhkABAEIMaAhT9DUe/MW44Qaf49QTrcMZUkbaf+jvWG8LGAghg5/hpYZ0XAonqirZmmRHioEur3ia7+BDSGQwGav1+X0ajkWbQjrSKMMuFtczyCpQREhD7IOd4PKqBJJakcTlAa4gosbGCudhJmqR1hCwHRqTKOmLkms+6qRfgIc8kSzMFJAglhXOUFgGghl6vpzc7lAAtmx+6yr+ZtpG4xEle5GIj27jB+Q1ueoChBHAWhuFLNu0eRV0zV83DayBlUVYsx49GGSg5dlgtmx9Nn79+PCiDSimMJI6qCBENCWH09X2oUvEuU79fdcy+x9TVF290t1qOKLBacxtazcTAE4zAH81VjqlVXUteAaVJIsYPG3OwiZRwiHP+Kv01X0qUF+aGh3j3vft/tM0vjY/xBSTs1OwHe5f2AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/5feddc83c540efeb42370a1e0fcd2465/51a8e/54424d90e4f04475e490671a741a9cee60e17212.webp 340w,
+/static/5feddc83c540efeb42370a1e0fcd2465/e0dff/54424d90e4f04475e490671a741a9cee60e17212.webp 620w&quot;
+              sizes=&quot;(max-width: 620px) 100vw, 620px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/5feddc83c540efeb42370a1e0fcd2465/ad208/54424d90e4f04475e490671a741a9cee60e17212.png 340w,
+/static/5feddc83c540efeb42370a1e0fcd2465/6755f/54424d90e4f04475e490671a741a9cee60e17212.png 620w&quot;
+            sizes=&quot;(max-width: 620px) 100vw, 620px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/5feddc83c540efeb42370a1e0fcd2465/6755f/54424d90e4f04475e490671a741a9cee60e17212.png&quot;
+            alt=&quot;54424d90e4f04475e490671a741a9cee60e17212.png&quot;
+            title=&quot;54424d90e4f04475e490671a741a9cee60e17212.png&quot;
+            loading=&quot;lazy&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;54424d90e4f04475e490671a741a9cee60e17212.png&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;References&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://frontendmasters.com/courses/practical-machine-learning/&quot;&gt;https://frontendmasters.com/courses/practical-machine-learning/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Logistic_regression#:~:text=Logistic%20regression%20is%20a%20statistical,a%20form%20of%20binary%20regression&quot;&gt;https://en.wikipedia.org/wiki/Logistic_regression#:~:text=Logistic regression is a statistical,a form of binary regression&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://qz.com/1034972/the-data-that-changed-the-direction-of-ai-research-and-possibly-the-world/&quot;&gt;https://qz.com/1034972/the-data-that-changed-the-direction-of-ai-research-and-possibly-the-world/&lt;/a&gt;&lt;/p&gt;</content:encoded></item></channel></rss>
