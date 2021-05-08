@@ -17,10 +17,27 @@ const AboutPage = ({ data }) => {
 
       <article className="post-content page-template no-image">
         <div className="post-content-body">
-          <h2 id="about-page-description">
-            Clean design, beautiful typography. This is the blog I want to give
-            you.
-          </h2>
+          <h2 id="page-title">Nice to have you here!</h2>
+          <p>
+            My name is Huy. I'm a software engineer. My current stack includes
+            Python, SQL, Node.js/React.js.
+          </p>
+          <p>
+            That said, I do full stack development with more focus on the
+            backend side while managing reasonable duty on frontend (like this
+            blog).
+          </p>
+          <p>
+            This blog is not aimed at teaching you software engineering or
+            computer science, though you might find it helpful in that respect.
+          </p>
+          <p>
+            This blog is for everyone who would like to know more about tech,
+            who heard buzz words over somewhere and wanted to know what they
+            meant.
+          </p>
+          <p>I hope you enjoy reading as much as I enjoy writing!</p>
+          <p>Cheers, Huy.</p>
           <figure className="kg-card kg-image-card kg-width-full">
             <GatsbyImage
               image={data.benchAccounting.childImageSharp.gatsbyImageData}
@@ -28,20 +45,6 @@ const AboutPage = ({ data }) => {
             />
             <figcaption>An image to help relax your eyes.</figcaption>
           </figure>
-          <h3 id="dynamic-styles">My name is Huy. I'm a software engineer.</h3>
-          <p>
-            In 2019, I co-founded BestBud, a company leveraging AI and other
-            advanced technologies to benefit children's learning and
-            development. We are looking for technical collaboration and business
-            opportunities in:
-          </p>
-          <p>+ AI / Machine Learning</p>
-          <p>+ Robotics for Education</p>
-          <p>+ Web and Mobile App Development</p>
-          <p>
-            To discuss idea, please email me at{' '}
-            <a href="mailto:huy@bbudtech.com">huy@bbudtech.com</a>{' '}
-          </p>
         </div>
       </article>
     </Layout>

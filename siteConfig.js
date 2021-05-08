@@ -1,8 +1,8 @@
 module.exports = {
-  name: 'London',
-  shortName: 'london',
-  description: 'A Gatsby-Notion-GithubPages Blog',
-  url: 'https://github.com/huydhoang/gatsby-notion-ghpages', // https://yourdomain.com
+  name: 'Productivity & Code',
+  shortName: 'ProdCode',
+  description: 'Modern Lifestyles and Tech Decoded',
+  url: 'https://huydhoang.com', // https://yourdomain.com
   prefix: '/',
   author: 'Huy',
   twitter: 'huydh_',
