@@ -67,8 +67,8 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "format": "prettier --write src/**/*.{js,jsx}",
-    "pull": "dotenv -- python ./bin/get-blog-posts.py",
-    "pull-dev": "rm -rf content_bak/blog/* && mv content/blog/* content_bak/blog && dotenv -- ./venv/Scripts/python ./bin_dev/get-blog-posts.py",
+    "backup": "rm -rf content_bak/blog/* && mv content/blog/* content_bak/blog",
+    "clean": "rm -rf content/blog/*",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "husky": {

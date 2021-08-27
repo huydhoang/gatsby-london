@@ -1,5 +1,5 @@
-const urljoin = require("url-join")
-const siteConfig = require("./siteConfig")
+const urljoin = require('url-join');
+const siteConfig = require('./siteConfig');
 
 module.exports = {
   siteMetadata: {
@@ -60,11 +60,11 @@ module.exports = {
       resolve: `gatsby-plugin-postcss`,
       options: {
         postCssPlugins: [
-          require("postcss-easy-import")(),
-          require("postcss-custom-properties")({ preserve: false }),
-          require("postcss-color-function")(),
-          require("autoprefixer")({
-            overrideBrowserslist: ["last 2 versions"],
+          require('postcss-easy-import')(),
+          require('postcss-custom-properties')({ preserve: false }),
+          require('postcss-color-function')(),
+          require('autoprefixer')({
+            overrideBrowserslist: ['last 2 versions'],
           }),
         ],
       },
@@ -104,15 +104,15 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
+              return allMarkdownRemark.edges.map((edge) => {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ "content:encoded": edge.node.html }],
-                })
-              })
+                  custom_elements: [{ 'content:encoded': edge.node.html }],
+                });
+              });
             },
             query: `
               {
@@ -133,7 +133,7 @@ module.exports = {
                 }
               }
             `,
-            output: "/rss.xml",
+            output: '/rss.xml',
             title: "The Data Organization's RSS Feed",
           },
         ],
@@ -154,4 +154,7 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
   ],
-}
+  flags: {
+    FAST_DEV: true,
+  },
+};

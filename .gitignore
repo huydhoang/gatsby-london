@@ -1,9 +1,3 @@
-# dev scripts
-bin_dev/
-
-# venv
-venv/
-
 # Local configs
 .idea/
 .vscode/
